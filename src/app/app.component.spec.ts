@@ -1,35 +1,42 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { noop } from 'rxjs';
+import { beforeEachCompiler, FixturePayload } from 'test-base';
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
+it('Should init the Test Suite', noop); // ****** The first test fails unless I add this ******
+
+describe('AppComponent', (): void => {
+  let instance: AppComponent;
+
+  beforeEach(async (): Promise<void> => {
+    try {
+      const fixturePayload: FixturePayload<AppComponent> = await beforeEachCompiler(
+        AppComponent,
+        [],
+        [],
+        [AppComponent],
+        []
+      );
+      instance = fixturePayload.instance;
+    } catch (error) {
+      console.log(error); // tslint:disable-line:no-console
+    }
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  describe('constructor', (): void => {
+    it('should create the app', (): void => {
+      expect(instance).toBeDefined();
+    });
   });
 
-  it(`should have as title 'JestTest'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('JestTest');
+  describe('ngOnInit', (): void => {
+    it('should initialize the component', (): void => {
+      expect(instance.value).toBeFalsy();
+
+      instance.ngOnInit();
+
+      // Error is reported on line 37. Reported line is farther away the further down the file the test is
+      expect(instance.value).toBeFalsy();
+    });
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('JestTest app is running!');
-  });
 });

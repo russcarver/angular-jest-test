@@ -1,18 +1,43 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/spec",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "outDir": "./dist/out-tsc",
+    "paths": {
+      "*": [
+        "src/*"
+      ],
+      "app/*": [
+        "src/app/*"
+      ],
+      "environments/*": [
+        "src/environments/*"
+      ],
+      "lib/*": [
+        "src/lib/*"
+      ]
+    },
+    "removeComments": false,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "target": "es2015",
     "types": [
-      "jasmine"
+      "jest",
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
     ]
   },
-  "files": [
-    "src/test.ts",
-    "src/polyfills.ts"
-  ],
-  "include": [
-    "src/**/*.spec.ts",
-    "src/**/*.d.ts"
-  ]
+  "exclude": ["**/node_modules", "dist", "**/.*/"]
 }

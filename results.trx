@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="54a1b1e2-6ff4-4a68-a702-db39c9e874b0" name="rcarver@Russ-IFS-MBP 2021-03-08T23:05:22.798Z" runUser="rcarver" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Jest test run" id="084beb49-54cc-43c3-a19e-4eabbb521240"/>
+  <Times creation="2021-03-08T23:05:22.798Z" queuing="2021-03-08T23:05:22.798Z" start="2021-03-08T23:05:22.798Z" finish="2021-03-08T23:05:22.798Z"/>
+  <ResultSummary outcome="Failed">
+    <Counters total="3" executed="3" passed="2" failed="1" error="0"/>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Should init the Test Suite" id="e5f97a88-4626-4150-9d3e-08a3d2c43283" storage="src/app/app.component.spec.ts">
+      <Execution id="493faaed-4a63-44e7-8681-7d55a95e98c1"/>
+      <TestMethod codeBase="src/app/app.component.spec.ts" name="Should init the Test Suite" className="No suite"/>
+    </UnitTest>
+    <UnitTest name="AppComponent / constructor / should create the app" id="52c40d57-4be7-4e45-b7ec-ee6831150b4a" storage="src/app/app.component.spec.ts">
+      <Execution id="fb6c75bd-52ff-498f-a2d2-4cb46eea1c87"/>
+      <TestMethod codeBase="src/app/app.component.spec.ts" name="AppComponent / constructor / should create the app" className="AppComponent"/>
+    </UnitTest>
+    <UnitTest name="AppComponent / ngOnInit / should initialize the component" id="fb08c606-e4db-4df1-be3b-71e8caaa378b" storage="src/app/app.component.spec.ts">
+      <Execution id="d1d1795f-4f53-4203-92d1-b8023470f32e"/>
+      <TestMethod codeBase="src/app/app.component.spec.ts" name="AppComponent / ngOnInit / should initialize the component" className="AppComponent"/>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda"/>
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="e5f97a88-4626-4150-9d3e-08a3d2c43283" executionId="493faaed-4a63-44e7-8681-7d55a95e98c1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="52c40d57-4be7-4e45-b7ec-ee6831150b4a" executionId="fb6c75bd-52ff-498f-a2d2-4cb46eea1c87" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="fb08c606-e4db-4df1-be3b-71e8caaa378b" executionId="d1d1795f-4f53-4203-92d1-b8023470f32e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+  </TestEntries>
+  <Results>
+    <UnitTestResult testId="e5f97a88-4626-4150-9d3e-08a3d2c43283" executionId="493faaed-4a63-44e7-8681-7d55a95e98c1" testName="Should init the Test Suite" computerName="Russ-IFS-MBP" duration="00:00:01.229" startTime="2021-03-08T23:05:23.985Z" endTime="2021-03-08T23:05:25.214Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="52c40d57-4be7-4e45-b7ec-ee6831150b4a" executionId="fb6c75bd-52ff-498f-a2d2-4cb46eea1c87" testName="AppComponent / constructor / should create the app" computerName="Russ-IFS-MBP" duration="00:00:01.229" startTime="2021-03-08T23:05:25.214Z" endTime="2021-03-08T23:05:26.443Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="fb08c606-e4db-4df1-be3b-71e8caaa378b" executionId="d1d1795f-4f53-4203-92d1-b8023470f32e" testName="AppComponent / ngOnInit / should initialize the component" computerName="Russ-IFS-MBP" duration="00:00:01.229" startTime="2021-03-08T23:05:26.443Z" endTime="2021-03-08T23:05:27.672Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeFalsy[2m()[22m
+
+Received: [31mtrue[39m
+    at /Users/rcarver/Code/JestTest/src/app/app.component.spec.ts:37:36
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (/Users/rcarver/Code/JestTest/node_modules/zone.js/bundles/zone-testing-bundle.umd.js:402:30)
+    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (/Users/rcarver/Code/JestTest/node_modules/zone.js/bundles/zone-testing-bundle.umd.js:3746:43)
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (/Users/rcarver/Code/JestTest/node_modules/zone.js/bundles/zone-testing-bundle.umd.js:401:56)
+    at Zone.Object.&lt;anonymous&gt;.Zone.run (/Users/rcarver/Code/JestTest/node_modules/zone.js/bundles/zone-testing-bundle.umd.js:162:47)
+    at /Users/rcarver/Code/JestTest/node_modules/jest-zone-patch/index.js:50:27
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (/Users/rcarver/Code/JestTest/node_modules/zone.js/bundles/zone-testing-bundle.umd.js:402:30)
+    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (/Users/rcarver/Code/JestTest/node_modules/zone.js/bundles/zone-testing-bundle.umd.js:3746:43)
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (/Users/rcarver/Code/JestTest/node_modules/zone.js/bundles/zone-testing-bundle.umd.js:401:56)
+    at Zone.Object.&lt;anonymous&gt;.Zone.run (/Users/rcarver/Code/JestTest/node_modules/zone.js/bundles/zone-testing-bundle.umd.js:162:47)
+    at Object.wrappedFunc (/Users/rcarver/Code/JestTest/node_modules/zone.js/bundles/zone-testing-bundle.umd.js:4231:34)
+    at Object.asyncJestTest (/Users/rcarver/Code/JestTest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /Users/rcarver/Code/JestTest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/rcarver/Code/JestTest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /Users/rcarver/Code/JestTest/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
